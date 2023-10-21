@@ -11,15 +11,15 @@ total_units = st.number_input("Enter the total units:", min_value=1, value=1, st
 
 # Calculate price per unit
 price_per_unit = price / total_units
-with_bev_fee = price_per_unit + 0.06
+tax_and_bev = (price_per_unit * 1.04712) + 0.06
 
 # Display the result to the user
 st.write(f"Price per unit with beverage fee: ${with_bev_fee:.2f}")
 
 # Optional: Display a message based on the result
 st.write("Charge $1, your total units profit will be:")
-st.write(f"{(total_units * 1) - (with_bev_fee * total_units):.2f}")
+st.write(f"{(total_units * 1) - (tax_and_bev * total_units):.2f}")
 st.write("Charge $2, your total units profit will be:")
-st.write(f"{(total_units * 2) - (with_bev_fee * total_units):.2f}")
+st.write(f"{(total_units * 2) - (wtax_and_bev * total_units):.2f}")
 
 # You can add more features and formatting as desired.
