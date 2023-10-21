@@ -20,6 +20,6 @@ st.write(f"Price per unit with beverage fee: ${with_bev_fee:.2f}")
 st.write("Charge $1, your total units profit will be:")
 st.write(f"{(total_units * 1) - (tax_and_bev * total_units):.2f}")
 st.write("Charge $2, your total units profit will be:")
-st.write(f"{(total_units * 2) - (wtax_and_bev * total_units):.2f}")
+st.write(f"{(total_units * 2) - (tax_and_bev * total_units):.2f}")
 
 # You can add more features and formatting as desired.
