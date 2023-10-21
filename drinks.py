@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Create a Streamlit app
-st.title("Price Per Unit Calculator")
+st.title("Price Per Unit Calculator",divider='rainbow')
 
 # User input for price
 price = st.number_input("Enter the price:", min_value=0.01, value=1.00, step=0.01)
