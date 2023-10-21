@@ -36,7 +36,7 @@ retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
 
 # Optional: Display a message based on the result
 st.subheader(f"Total profit @ ${retail_price}:")
-st.subheader(f"{((retail_price_options - tax_and_bev) * total_units):.2f}")
+st.subheader(f"{((retail_price - tax_and_bev) * total_units):.2f}")
 
 
 # # Define the content for the fixed footer
