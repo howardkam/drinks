@@ -17,7 +17,7 @@ st.markdown(
 )
 
 # User input for price
-price = st.number_input("Enter the price:", min_value=0.01, value="", step=0.01)
+price = st.number_input("Enter the price:",min_value=None, max_value=None, value=None, step=None)
 
 # User input for total units
 total_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1)
