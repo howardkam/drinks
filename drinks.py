@@ -17,7 +17,7 @@ st.markdown(
 )
 
 # User input for price
-price = st.number_input("Enter the price:",min_value=1, max_value=None, value=None, step=None)
+price = st.number_input("Enter the price:",min_value=1, max_value=None, value=1, step=None)
 
 # User input for total units
 total_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1)
@@ -39,16 +39,17 @@ st.subheader(f"Total profit @ ${retail_price}:")
 st.subheader(f"{(total_units * retail_price) - (tax_and_bev * total_units):.2f}")
 
 
-# Define the content for the fixed footer
+# # Define the content for the fixed footer
 footer_content = """
-<div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: #f0f0f0; text-align: center; padding: 10px;">
-    <p>This is a fixed footer in Streamlit.</p>
+<div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: black; text-align: center; padding: 10px;">
+    <p>Written by Howard Kam</p>
 </div>
 """
 
-# Display the fixed footer using the st.markdown function
+# # Display the fixed footer using the st.markdown function
 st.markdown(footer_content, unsafe_allow_html=True)
 
-# Your main content goes above this
-st.write("Written by Howard Kam")
+# # Your main content goes above this
+# st.write("Written by Howard Kam")
+
 
