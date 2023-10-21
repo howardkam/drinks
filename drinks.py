@@ -14,7 +14,7 @@ price_per_unit = price / total_units
 tax_and_bev = (price_per_unit * 1.04712) + 0.06
 
 # Display the result to the user
-st.write(f"Price per unit with beverage fee: ${with_bev_fee:.2f}")
+st.write(f"Price per unit with beverage fee: ${tax_and_bev:.2f}")
 
 # Optional: Display a message based on the result
 st.write("Charge $1, your total units profit will be:")
