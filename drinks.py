@@ -18,10 +18,10 @@ st.write(f"Price per unit with beverage fee: ${tax_and_bev:.2f}")
 
 # Select retail price
 retail_price_options = [1, 1.5, 2]
-retail_price = st.selectbox("Select the total units:", retail_price_options)
+retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
 
 # Optional: Display a message based on the result
-st.write(f"Total profit @ {retail_price}:")
+st.write(f"Total profit @ ${retail_price} dolars:")
 st.write(f"{(total_units * retail_price) - (tax_and_bev * total_units):.2f}")
 
 
