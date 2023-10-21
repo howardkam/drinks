@@ -1,7 +1,20 @@
 import streamlit as st
 
 # Create a Streamlit app
-st.title("Price Per Unit Calculator",divider='rainbow')
+st.title("Price Per Unit Calculator")
+# Create a rainbow-colored divider using HTML and CSS
+st.markdown(
+    """
+    <style>
+    .rainbow-divider {
+        background: linear-gradient(to right, #FF0000, #FFA500, #FFFF00, #008000, #0000FF, #4B0082, #9400D3);
+        height: 1px;
+    }
+    </style>
+    <div class="rainbow-divider"></div>
+    """,
+    unsafe_allow_html=True
+)
 
 # User input for price
 price = st.number_input("Enter the price:", min_value=0.01, value=1.00, step=0.01)
