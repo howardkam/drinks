@@ -1,7 +1,8 @@
 import streamlit as st
 
 # Create a Streamlit app
-st.title("Price Per Unit Calculator")
+st.title("Hawaii Beverage Profit Calculator")
+st.write("Sales tax and beverage fee calculated")
 # Create a rainbow-colored divider using HTML and CSS
 st.markdown(
     """
