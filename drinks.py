@@ -1,7 +1,8 @@
 import streamlit as st
 
 #### IMPORTANT!!!! #####
-# Make sure st.number_input fields have UNIQUE KEYS!!
+# st.slider NEEDS UNIQUE IDs
+# st.number_input NEEDS UNIQUE IDs
 
 # Create two columns
 col1, col2 = st.columns(2)
@@ -27,14 +28,14 @@ with col1:
     # User input for price
     price = st.number_input("Enter the price:", min_value=0.01, value=1.0, step=0.01, key = "b1")
     # User input for total units
-    total_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1, key = "be")
+    total_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1, key = "b2")
     # Calculate cost per unit
     tax_and_bev = ((price / total_units) * 1.04712) + 0.06
     st.write(f"Cost per unit after tax and bev fee: ${tax_and_bev:.2f}")
     # Select retail price per unit
     #retail_price_options = [1, 1.25, 1.50, 2]
     #retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
-    pre_retail = st.slider("Sell for 1-5", 1.0, 3.0, 1.0, 0.25)
+    pre_retail = st.slider("Sell for 1-5", 1.0, 3.0, 1.0, 0.25, key = "b3")
     retail_price = float(pre_retail)
     # Optional: Display a message based on the result
     st.subheader(f"Total profit @ ${retail_price}:")
@@ -72,7 +73,7 @@ with col2:
     foodtotal_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1, key="f2")
     tax = ((price / total_units) * 1.04712)
     st.write(f"Cost per unit after tax and bev fee: ${tax:.2f}")
-    foodpre_retail = st.slider("Sell for 1-5", 1.0, 3.0, 1.0, 0.25)
+    foodpre_retail = st.slider("Sell for 1-5", 1.0, 3.0, 1.0, 0.25, key = "f3")
     foodretail_price = float(foodpre_retail)
     st.subheader(f"Total profit @ ${foodretail_price}:")
     st.subheader(f"{((foodretail_price - tax) * foodtotal_units):.2f}")
