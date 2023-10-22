@@ -32,10 +32,11 @@ st.write(f"Cost per unit after tax and bev fee: ${tax_and_bev:.2f}")
 #retail_price_options = [1, 1.25, 1.50, 2]
 #retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
 retail_price = st.slider("Sell for:", 0, 5.0, step=0.25, value=1)
+st.write(retail_price)
 
 # Optional: Display a message based on the result
-st.subheader(f"Total profit @ ${retail_price}:")
-st.subheader(f"{((retail_price - tax_and_bev) * total_units):.2f}")
+# st.subheader(f"Total profit @ ${retail_price}:")
+# st.subheader(f"{((retail_price - tax_and_bev) * total_units):.2f}")
 
 # # Define the content for the fixed footer
 footer_content = """
