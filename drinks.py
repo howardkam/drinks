@@ -37,9 +37,14 @@ with col1:
     #retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
     pre_retail = st.slider("Sell for 1-5", 1.00, 3.00, 1.0, 0.25, key = "b3")
     retail_price = float(pre_retail)
-    # Optional: Display a message based on the result
     st.subheader(f"Total profit @ ${retail_price}:")
-    st.subheader(f"{((retail_price - tax_and_bev) * total_units):.2f}")
+    drink_profit_on_all = ((retail_price - tax_and_bev) * total_units)
+    if drink_profit_on_all > 0:
+        st.subheader(f"{drink_profit_on_all:.2f} per unit")
+    else:
+        st.write("<span style='color: red; font-size: 1.5rem;'>PROFIT LOSS at 1 Dollar</span>", unsafe_allow_html=True)
+    
+    
     # # Define the content for the fixed footer
     footer_content = """
     <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: black; text-align: center; padding: 10px;">
@@ -77,7 +82,7 @@ with col2:
     st.subheader(f"Total profit @ ${foodretail_price}:")
     food_profit_on_all = ((foodretail_price - unit_cost_after_tax) * foodtotal_units)
     if food_profit_on_all > 0:
-        st.subheader(f"{food_profit_on_all:.2f}")
+        st.subheader(f"{food_profit_on_all:.2f} per unit")
     else:
         st.write("<span style='color: red; font-size: 1.5rem;'>PROFIT LOSS at 1 Dollar</span>", unsafe_allow_html=True)
     ###################################################################
