@@ -78,5 +78,6 @@ with col2:
     food_profit_on_all = ((foodretail_price - unit_cost_after_tax) * foodtotal_units)
     if food_profit_on_all > 0:
         st.subheader(f"{food_profit_on_all:.2f}")
-
+    else:
+        st.write(f"You will LOSE {food_profit_on_all:.2f} per unit at 1 dollar")
     ###################################################################
