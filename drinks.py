@@ -65,6 +65,6 @@ with col2:
         """,
         unsafe_allow_html=True
     )
-    foodprice = st.number_input("Enter the price:", min_value=0.01, value=1.0, step=0.01)
+    foodprice = st.number_input("Enter the price:", min_value=0.01, value=1.0, step=0.01, key = "food")
 
     ###################################################################
