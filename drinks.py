@@ -76,7 +76,7 @@ with col2:
     foodretail_price = float(foodpre_retail)
     st.subheader(f"Total profit @ ${foodretail_price}:")
     food_profit_on_all = ((foodretail_price - unit_cost_after_tax) * foodtotal_units)
-    if foodretail_price > 0:
+    if food_profit_on_all > 0:
         st.subheader(f"{food_profit_on_all:.2f}")
 
     ###################################################################
