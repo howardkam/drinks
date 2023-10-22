@@ -75,7 +75,8 @@ with col2:
     foodpre_retail = st.slider("Sell for 1-5", 1.00, 5.00, 1.0, 0.25, key = "f3")
     foodretail_price = float(foodpre_retail)
     st.subheader(f"Total profit @ ${foodretail_price}:")
+    food_profit_on_all = ((foodretail_price - unit_cost_after_tax) * foodtotal_units)
     if foodretail_price > 0:
-        st.subheader(f"{((foodretail_price - unit_cost_after_tax) * foodtotal_units):.2f}")
+        st.subheader(f"{food_profit_on_all:.2f}")
 
     ###################################################################
