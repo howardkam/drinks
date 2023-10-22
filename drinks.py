@@ -1,35 +1,11 @@
 import streamlit as st
+import subprocess
 
-# Define the main page content
-def main_page():
-    st.title("Streamlit Multi-Page App")
-    st.write("This is the main page.")
-    st.write("Click the button to go to another page.")
+st.title("Streamlit App to Run Another Python Script")
+
+# Define a button to run another script
+if st.button("Run Another Script"):
+    result = subprocess.run(["python", "drinks-master.py"], capture_output=True, text=True)
     
-    if st.button("Go to Second Page"):
-        page = "second_page"
-
-    return page
-
-# Define the second page content
-def second_page():
-    st.title("Second Page")
-    st.write("This is the second page.")
-    st.write("Click the button to go back to the main page.")
-    
-    if st.button("Go Back to Main Page"):
-        page = "main_page"
-
-    return page
-
-# Main function
-def main():
-    page = "main_page"
-
-    if page == "main_page":
-        page = main_page()
-    elif page == "second_page":
-        page = second_page()
-
-if __name__ == '__main__':
-    main()
+    st.subheader("Output:")
+    st.code(result.stdout)
