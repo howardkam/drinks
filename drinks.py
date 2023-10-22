@@ -40,7 +40,7 @@ with col1:
     st.subheader(f"Total profit @ ${retail_price}:")
     drink_profit_on_all = ((retail_price - tax_and_bev) * total_units)
     if drink_profit_on_all > 0:
-        st.subheader(f"{drink_profit_on_all:.2f}")
+        st.subheader(f"${drink_profit_on_all:.2f}")
     else:
         st.write("<span style='color: red; font-size: 1.5rem;'>PROFIT LOSS at 1 Dollar</span>", unsafe_allow_html=True)
     
@@ -82,7 +82,7 @@ with col2:
     st.subheader(f"Total profit @ ${foodretail_price}:")
     food_profit_on_all = ((foodretail_price - unit_cost_after_tax) * foodtotal_units)
     if food_profit_on_all > 0:
-        st.subheader(f"{food_profit_on_all:.2f}")
+        st.subheader(f"${food_profit_on_all:.2f}")
     else:
         st.write("<span style='color: red; font-size: 1.5rem;'>PROFIT LOSS at 1 Dollar</span>", unsafe_allow_html=True)
     ###################################################################
