@@ -51,7 +51,7 @@ st.markdown(
     """
     <style>
     .vertical-divider {
-        border-left: 1px solid #ccc;
+        border-left: 1px solid white;
         height: 100%;
         margin: 0 10px;
     }
