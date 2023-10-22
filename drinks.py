@@ -46,7 +46,20 @@ with col1:
     st.markdown(footer_content, unsafe_allow_html=True)
     ###################################################################
 
-st.markdown("---")
+# Apply CSS to create a vertical divider
+st.markdown(
+    """
+    <style>
+    .vertical-divider {
+        border-left: 1px solid #ccc;
+        height: 100%;
+        margin: 0 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Column 2
 with col2:
     ##################### BEVERAGE CALC PAGE #####################
