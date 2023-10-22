@@ -79,5 +79,5 @@ with col2:
     if food_profit_on_all > 0:
         st.subheader(f"{food_profit_on_all:.2f}")
     else:
-        st.write(f"<span style='color: #ffb703; font-size: 1.5rem;'>{food_profit_on_all:.2f} per unit at 1 dollar</span>")
+        st.write(f"<span style='color: #ffb703; font-size: 1.5rem;> {food_profit_on_all:.2f} per unit at 1 dollar</span>",unsafe_allow_html=True)
     ###################################################################
