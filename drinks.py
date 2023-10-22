@@ -32,8 +32,8 @@ st.write(f"Cost per unit after tax and bev fee: ${tax_and_bev:.2f}")
 #retail_price_options = [1, 1.25, 1.50, 2]
 #retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
 
-retail_price = int(st.slider("Select a value", 0.0, 3.0, value=1, step=0.25))
-
+pre_retail = st.slider("Sell for 1-5", 1.0, 5.0, 1.0, 0.25)
+retail_price = float(pre_retail)
 
 # Optional: Display a message based on the result
 st.subheader(f"Total profit @ ${retail_price}:")
