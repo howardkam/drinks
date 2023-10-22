@@ -45,7 +45,7 @@ with col1:
     # # Display the fixed footer using the st.markdown function
     st.markdown(footer_content, unsafe_allow_html=True)
     ###################################################################
-st.markdown("---")
+
 
 # Column 2
 with col2:
@@ -65,20 +65,6 @@ with col2:
         """,
         unsafe_allow_html=True
     )
-    # User input for price
-    foodprice = st.number_input("Enter the price:", min_value=0.01, value=1.0, step=0.01)
-    # User input for total units
-    foodtotal_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1)
-    # Calculate cost per unit
-    tax = ((price / total_units) * 1.04712)
-    st.write(f"Cost per unit after tax and bev fee: ${tax:.2f}")
-    # Select retail price per unit
-    #retail_price_options = [1, 1.25, 1.50, 2]
-    #retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
-    foodpre_retail = st.slider("Sell for 1-5", 1.0, 3.0, 1.0, 0.25)
-    foodretail_price = float(foodpre_retail)
-    # Optional: Display a message based on the result
-    st.subheader(f"Total profit @ ${foodretail_price}:")
-    st.subheader(f"{((foodretail_price - tax) * foodtotal_units):.2f}")
+    
 
     ###################################################################
