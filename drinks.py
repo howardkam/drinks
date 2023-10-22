@@ -10,7 +10,7 @@ col1, col2 = st.columns(2)
 # Column 1
 with col1:
     ##################### BEVERAGE CALC PAGE #####################
-    st.write("<span style='color: #ffb703; font-size: 2rem;'>BEVERAGE PROFIT CALC</span>")
+    st.write("<span style='color: #ffb703; font-size: 2rem;'>BEVERAGE PROFIT CALC</span>", unsafe_allow_html=True)
     st.subheader("Sales tax and beverage fee calculated")
     # Create a rainbow-colored divider using HTML and CSS
     st.markdown(
