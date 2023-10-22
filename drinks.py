@@ -1,8 +1,8 @@
 import streamlit as st
 
 # Create a Streamlit app
-st.title("Hawaii Beverage Profit Calculator")
-st.write("Sales tax and beverage fee calculated")
+st.title("BEVERAGE COST CALCULATOR")
+st.subheader("Sales tax and beverage fee calculated")
 # Create a rainbow-colored divider using HTML and CSS
 st.markdown(
     """
@@ -26,9 +26,7 @@ total_units = st.number_input("Enter the total units:", min_value=1, value=1, st
 
 # Calculate cost per unit
 tax_and_bev = ((price / total_units) * 1.04712) + 0.06
-
-# Display the result to the user
-st.write(f"Price per unit with beverage fee: ${tax_and_bev:.2f}")
+st.write(f"Cost per unit after tax and bev fee: ${tax_and_bev:.2f}")
 
 # Select retail price per unit
 retail_price_options = [1, 1.25, 1.50, 2]
@@ -37,7 +35,6 @@ retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
 # Optional: Display a message based on the result
 st.subheader(f"Total profit @ ${retail_price}:")
 st.subheader(f"{((retail_price - tax_and_bev) * total_units):.2f}")
-
 
 # # Define the content for the fixed footer
 footer_content = """
