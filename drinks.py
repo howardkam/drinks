@@ -46,19 +46,6 @@ with col1:
     st.markdown(footer_content, unsafe_allow_html=True)
     ###################################################################
 
-# Apply CSS to create a vertical divider
-st.markdown(
-    """
-    <style>
-    .vertical-divider {
-        border-left: 1px solid white;
-        height: 100%;
-        margin: 0 10px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Column 2
 with col2:
@@ -78,6 +65,6 @@ with col2:
         """,
         unsafe_allow_html=True
     )
-    
+    foodprice = st.number_input("Enter the price:", min_value=0.01, value=1.0, step=0.01)
 
     ###################################################################
