@@ -10,7 +10,7 @@ col1, col2 = st.columns(2)
 # Column 1
 with col1:
     ##################### BEVERAGE CALC PAGE #####################
-    st.title("BEVERAGE PROFIT CALC")
+    st.title("<span style='color: #ffb703;'>BEVERAGE PROFIT CALC.", unsafe_allow_html=True)
     st.subheader("Sales tax and beverage fee calculated")
     # Create a rainbow-colored divider using HTML and CSS
     st.markdown(
