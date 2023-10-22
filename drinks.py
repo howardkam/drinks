@@ -80,12 +80,5 @@ with col2:
     # Optional: Display a message based on the result
     st.subheader(f"Total profit @ ${foodretail_price}:")
     st.subheader(f"{((foodretail_price - tax) * foodtotal_units):.2f}")
-    # # Define the content for the fixed footer
-    footer_content = """
-    <div style="position: fixed; bottom: 0; left: 0; right: 0; background-color: black; text-align: center; padding: 10px;">
-        <p>Written by Howard Kam</p>
-    </div>
-    """
-    # # Display the fixed footer using the st.markdown function
-    st.markdown(footer_content, unsafe_allow_html=True)
+
     ###################################################################
