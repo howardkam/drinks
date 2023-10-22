@@ -46,7 +46,7 @@ with col1:
     st.markdown(footer_content, unsafe_allow_html=True)
     ###################################################################
 
-
+st.markdown("---")
 # Column 2
 with col2:
     ##################### BEVERAGE CALC PAGE #####################
