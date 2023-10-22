@@ -71,11 +71,11 @@ with col2:
     )
     foodprice = st.number_input("Enter the price:", min_value=0.01, value=1.0, step=0.01, key = "f1")
     foodtotal_units = st.number_input("Enter the total units:", min_value=1, value=1, step=1, key="f2")
-    tax = ((price / total_units) * 1.04712)
-    st.write(f"Cost per unit after tax and bev fee: ${tax:.2f}")
+    unit_cost_after_tax = ((price / total_units) * 1.04712)
+    st.write(f"Cost per unit after tax: ${unit_cost_after_tax:.2f}")
     foodpre_retail = st.slider("Sell for 1-5", 1.0, 3.0, 1.0, 0.25, key = "f3")
     foodretail_price = float(foodpre_retail)
     st.subheader(f"Total profit @ ${foodretail_price}:")
-    st.subheader(f"{((foodretail_price - tax) * foodtotal_units):.2f}")
+    st.subheader(f"{((foodretail_price - unit_cost_after_tax) * foodtotal_units):.2f}")
 
     ###################################################################
