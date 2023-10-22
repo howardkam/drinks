@@ -31,8 +31,9 @@ st.write(f"Cost per unit after tax and bev fee: ${tax_and_bev:.2f}")
 # Select retail price per unit
 #retail_price_options = [1, 1.25, 1.50, 2]
 #retail_price = st.selectbox("Suggested Retail Price:", retail_price_options)
-retail_price = st.slider('Sell for', 0, 5, 0.25)
-st.write(retail_price)
+
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm ", age, 'years old')
 
 # Optional: Display a message based on the result
 # st.subheader(f"Total profit @ ${retail_price}:")
